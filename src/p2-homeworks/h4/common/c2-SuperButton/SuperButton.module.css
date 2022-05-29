@@ -1,36 +1,44 @@
-
 .default {
-		background-color: #fff;
-		border: 1px solid #d5d9d9;
-		border-radius: 8px;
-		box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+		align-items: center;
+		appearance: none;
+		background-color: #FCFCFD;
+		border-radius: 4px;
+		border-width: 0;
+		box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 		box-sizing: border-box;
-		color: #0f1111;
+		color: #36395A;
 		cursor: pointer;
-		display: inline-block;
-		font-family: "Amazon Ember", sans-serif;
-		font-size: 13px;
-		line-height: 29px;
-		padding: 0 10px 0 11px;
+		display: inline-flex;
+		font-family: "JetBrains Mono", monospace;
+		justify-content: center;
+		line-height: 1;
+		list-style: none;
+		overflow: hidden;
+		padding-left: 16px;
+		padding-right: 16px;
 		position: relative;
-		text-align: center;
+		text-align: left;
 		text-decoration: none;
+		transition: box-shadow .15s, transform .15s;
 		user-select: none;
 		-webkit-user-select: none;
 		touch-action: manipulation;
-		vertical-align: middle;
-}
-
-.default:hover {
-		background-color: #f7fafa;
+		white-space: nowrap;
+		will-change: box-shadow, transform;
+		font-size: 18px;
+		min-height: 25px;
 }
 
 .default:focus {
-		border-color: #008296;
-		box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-		outline: 0;
+		box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
-.default:disabled{
-		cursor: default;
-		opacity: 0.5;
+
+.default:hover {
+		box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+		transform: translateY(-2px);
+}
+
+.default:active {
+		box-shadow: #D6D6E7 0 3px 7px inset;
+		transform: translateY(2px);
 }
