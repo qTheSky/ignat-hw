@@ -42,6 +42,8 @@
 		transform: translateY(2px);
 }
 .default:disabled{
-		opacity: 0.3;
+		opacity: 0.8;
 		cursor: default;
+		box-shadow: #D6D6E7 0 3px 10px inset;
+		transform: none;
 }
