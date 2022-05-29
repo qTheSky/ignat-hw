@@ -26,7 +26,6 @@
 		white-space: nowrap;
 		will-change: box-shadow, transform;
 		font-size: 18px;
-		min-height: 25px;
 }
 
 .default:focus {
@@ -41,4 +40,8 @@
 .default:active {
 		box-shadow: #D6D6E7 0 3px 7px inset;
 		transform: translateY(2px);
+}
+.default:disabled{
+		opacity: 0.3;
+		cursor: default;
 }
