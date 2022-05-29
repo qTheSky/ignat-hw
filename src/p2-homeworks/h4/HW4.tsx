@@ -22,9 +22,6 @@ function HW4() {
 
     return (
         <div>
-            <hr/>
-            homeworks 4
-
             <div className={s.column}>
                 <SuperInputText
                     value={text}
@@ -68,11 +65,6 @@ function HW4() {
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperInputText/>*/}
-            {/*<AlternativeSuperButton/>*/}
-            {/*<AlternativeSuperCheckbox/>*/}
             <hr/>
         </div>
     )

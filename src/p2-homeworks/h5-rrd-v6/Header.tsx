@@ -4,11 +4,11 @@ import {PATH} from './Pages';
 
 function Header() {
 		return (
-				<div>
+				<header>
 						<NavLink to={PATH.PRE_JUNIOR}>Pre Junior </NavLink>
 						<NavLink to={PATH.JUNIOR}>Junior </NavLink>
 						<NavLink to={PATH.JUNIOR_PLUS}>Junior Plus</NavLink>
-				</div>
+				</header>
 		)
 }
 
