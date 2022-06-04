@@ -6,13 +6,10 @@ import s from './Header.module.scss'
 function Header() {
 		return (
 				<header>
-						<nav>
-								<ul className={s.nav}>
-										<li><NavLink to={PATH.PRE_JUNIOR}>Pre Junior</NavLink></li>
-										<li><NavLink to={PATH.JUNIOR}>Junior</NavLink></li>
-										<li><NavLink to={PATH.JUNIOR_PLUS}>Junior Plus</NavLink></li>
-								</ul>
-						</nav>
+						<NavLink className={s.link} to={PATH.PRE_JUNIOR}>Pre Junior</NavLink>
+						<NavLink className={s.link} to={PATH.JUNIOR}>Junior</NavLink>
+						<NavLink className={s.link} to={PATH.JUNIOR_PLUS}>Junior Plus</NavLink>
+						<div className={s.kvadratik}/>
 				</header>
 		)
 }

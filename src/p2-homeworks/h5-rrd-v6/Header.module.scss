@@ -1,8 +1,21 @@
 header {
-
-	ul {
-		display: flex;
-		gap: 5px;
+	display: flex;
+	width: 280px;
+	transition-duration: 500ms;
+	transform: translate(-210px);
+	align-items: center;
+	.link {
+		text-decoration: none;
+		margin-left: 5px;
+	}
+	.kvadratik{
+		width: 20px;
+		height: 20px;
+		margin: 10px;
+		background: blueviolet;
+	}
+	&:hover{
+		transition-duration: 500ms;
+		transform: translate(0);
 	}
 }
-
