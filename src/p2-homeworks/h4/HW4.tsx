@@ -10,11 +10,6 @@ function HW4() {
 
     const showAlert = () => {
         error ? alert('Введите текст...') : alert(text)
-        // if (error) {
-        //     alert('введите текст...')
-        // } else {
-        //     alert(text) // если нет ошибки показать текст
-        // }
     }
 
     const [checked, setChecked] = useState<boolean>(false)
