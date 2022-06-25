@@ -1,3 +1,11 @@
 .buttonRemove {
 		margin-left: 10px;
 }
+.affairItem{
+		display: flex;
+		justify-content: space-between;
+		width: 285px;
+}
+.affairName{
+		width: 100px;
+}

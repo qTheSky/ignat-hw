@@ -21,6 +21,9 @@ test('sort name up', () => {
 		expect(newState[0].name).toBe('Александр')
 		expect(newState[1].name).toBe('Виктор')
 		expect(newState[3].name).toBe('Ирина')
+		const result = [1,3,4,5,2,0].filter((el,i)=>el===newState[i]._id)
+		expect(result.length).toBe(newState.length)
+
 })
 test('sort name down', () => {
 		const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'down'})
