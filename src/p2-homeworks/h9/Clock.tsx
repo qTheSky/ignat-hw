@@ -2,51 +2,57 @@ import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 
 function Clock() {
-    const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
-    const [show, setShow] = useState<boolean>(false)
 
-    const stop = () => {
-        // stop
-    }
-    const start = () => {
-        stop()
-        const id: number = window.setInterval(() => {
-            // setDate
-        }, 1000)
-        setTimerId(id)
-    }
+		const getDate = ()=>{
+				return new Date()
+		}
 
-    const onMouseEnter = () => {
-        // show
-    }
-    const onMouseLeave = () => {
-        // close
-    }
+		const [timerId, setTimerId] = useState<number>(0)
+		const [date, setDate] = useState<Date>(getDate)
+		const [show, setShow] = useState<boolean>(false)
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+		const stop = () => {
+				clearInterval(timerId)
+		}
+		const start = () => {
+				stop()
+				const id: number = +setInterval(() => {
+						setDate(getDate)
+				}, 1000)
+				setTimerId(id)
+		}
 
-    return (
-        <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
-            </div>
+		const onMouseEnter = () => {
+				setShow(true)
+		}
+		const onMouseLeave = () => {
+				setShow(false)
+		}
 
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
+		const stringTime = date?.toLocaleTimeString() || <br/>
+		const stringDate = date?.toLocaleDateString() || <br/>
 
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
+		return (
+				<div>
+						<div
+								onMouseEnter={onMouseEnter}
+								onMouseLeave={onMouseLeave}
+						>
+								{stringTime}
+						</div>
 
-        </div>
-    )
+						{show
+								? <div>
+										{stringDate}
+								</div>
+								: <br/>
+						}
+
+						<SuperButton onClick={start}>start</SuperButton>
+						<SuperButton onClick={stop}>stop</SuperButton>
+
+				</div>
+		)
 }
 
 export default Clock
