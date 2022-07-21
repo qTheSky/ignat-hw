@@ -1,4 +1,3 @@
-import {AppStoreType} from './store';
 
 
 type LoadingStateType = {
